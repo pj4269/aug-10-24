@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-aug1024-dev-113816-authRole",
+      "UnauthRoleArn": "arn:aws:iam::711141261525:role/amplify-aug1024-dev-113816-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::711141261525:role/amplify-aug1024-dev-113816-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-aug1024-dev-113816-deployment",
+      "UnauthRoleName": "amplify-aug1024-dev-113816-unauthRole",
+      "StackName": "amplify-aug1024-dev-113816",
+      "StackId": "arn:aws:cloudformation:us-west-2:711141261525:stack/amplify-aug1024-dev-113816/b601f1d0-5747-11ef-829b-0aa878cad5d3",
+      "AmplifyAppId": "d945q7dbt6eg4"
+    },
+    "categories": {
+      "function": {
+        "LambdaAug10": {
+          "deploymentBucketName": "amplify-aug1024-dev-113816-deployment",
+          "s3Key": "amplify-builds/LambdaAug10-49686e454d495a477858-build.zip"
+        }
+      },
+      "api": {
+        "ApiAug10": {}
+      }
+    }
+  }
+}

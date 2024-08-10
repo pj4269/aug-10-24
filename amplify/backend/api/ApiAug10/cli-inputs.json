@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/picture/{pictureId}": {
+      "name": "/picture/{pictureId}",
+      "lambdaFunction": "LambdaAug10",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

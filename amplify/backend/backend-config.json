@@ -1,0 +1,43 @@
+{
+  "api": {
+    "ApiAug10": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "LambdaAug10"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "LambdaAug10": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_LambdaAug10_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LambdaAug10"
+        }
+      ]
+    },
+    "AMPLIFY_function_LambdaAug10_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "LambdaAug10"
+        }
+      ]
+    }
+  }
+}
