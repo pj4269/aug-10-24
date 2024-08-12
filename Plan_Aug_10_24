@@ -1,0 +1,205 @@
+
+Aug 10, 24: 1. Problem : Trying to create a new Amplify App -> error: "Too many apps"
+
+               Solution: Delete Cloudformation stacks!
+               
+            2. amplify init    : Keep being created in us-west-2!  -> Create the new app in us-est-2
+            
+            3. Amplify Add Api    
+                   
+                   
+
+
+
+Aug-09-24:  1. Export API Gateway to US-West-1: https://stackoverflow.com/questions/55892591/need-to-change-region-for-amazon-api-gateway
+ 
+ 
+            2. Amplify Remove Api
+            
+            3. Amplify Add Api
+            
+            
+            
+            4. amplify-meta.json  : us-west-2  -> first created  -> Might have to re-create the whole thing.
+            
+            
+            
+            
+            
+
+
+1.   Create NPX: 
+
+      npx create-react-app aug-10-24    
+      cd aug-10-24 
+      npm start                                                                        
+   
+2.   Push to Github       
+			
+
+		 
+
+		git init
+		git add *
+		git commit -m "first commit"
+		git branch -M main
+		git remote add origin https://github.com/pj4269/aug-10-24.git
+		git push -u origin main
+			
+3.  Create Amplify and Github repo manually
+
+4.  amplify init 
+
+
+5.  amplify add api  : apiaug10
+                       /picture/{pictureId}
+
+
+                       lambda name      : lambdaaug10
+                       
+                       python : changed from Pythpon 3.8 to Python 3.10 :  
+     
+                                                            update a] Pipfile
+                                                                    b] ../amplify/backend/function/amplifyjun05/amplifyjun05-cloudformation-template.json                       
+    
+6. amplify push   : amplify-meta.json  shows us-west-2
+7. github push
+
+		  git init
+			git add *
+			git commit -m "2nd commit"
+			git branch -M main
+			git push -u origin main
+			
+			
+			
+8. Gateway :  How do you see your newly created API on Gateway?			: Gateway creation takes about 5-10 min -> so wait  -> It' created
+			
+
+
+
+
+
+
+
+   
+   
+def handler(event, context):
+  print('received event: ', event)
+  get_raw_path    = "/NewGetP"
+  create_raw_path = "/postP"
+  
+  time = "11:53"
+  message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
+  
+  if event['path'] == get_raw_path:
+    # call database
+    pid = event['queryStringParameters']['p_id']
+    print ("Using GEEEEEEEETTTTT")
+    print ("received number: ", pid, type(pid), int(pid)+5)
+    print ('Hello from your new Amplify Python lambda GET !' + time)
+    #return { "aaaaaaaaaaaaaaaaa": "bbbbbbbbb"  }
+    #message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
+    # not worked:
+    #return {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"} 
+    # worked
+    return {
+      'statusCode': 200,
+      'headers': {
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'GET' }, 'body': json.dumps( message )#'Hello from your new Amplify Python lambda GET !' + time)
+          }
+    
+          
+          
+  elif  event['path'] == create_raw_path:
+    print ("Using POSSSSSSSSSST")
+    
+    body = json.loads(event['body'])
+    f_name = body['f_name']
+    l_name = body['l_name']
+    print ("received names:  ",  f_name, l_name)
+    print ('Hello from your new Amplify Python lambda- POST!'  + time)
+    # return {"f_name_received": f_name}
+    #worked
+    return {
+      'statusCode': 200,
+      'headers': {
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST' }, 'body': json.dumps(message)
+          }
+    
+          
+  else:
+    return {
+      'statusCode': 200,
+      'headers': {
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET'  },  'body': json.dumps('Hello from your new Amplify Python lambda-ANY '  + time) }
+          
+          
+          
+
+10. How to test it ? - Here Jul 25, 24
+
+ a) npm install react-webcam
+    
+    npm install aws-amplify
+
+ b) Copy, paste : 'Components' and App.js from "Jun-27-24"
+
+ c) amplify push
+ 
+ d) 
+ 		  git init
+			git add *
+			git commit -m "App.js copied and pasted and installed aws-amplify, react-webcam"
+			git branch -M main
+			git push -u origin main
+
+
+
+10. There' no Cloudwatch log group anymore  : changed const response = await fetch("https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/");
+                                               to all the files in 'Components'
+                                               
+                                               
+                                            : Cloudwatch log appears when I send this on the browser: 
+                                                a) https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev/picture/123   
+
+
+
+
+
+
+
+11. Go to API Gateway in AWS Console.
+    Select your API.
+    Go to the Resources section.
+    Select the resource and method (e.g., /picture/{pictureId} GET).
+    Click on "Enable CORS".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
