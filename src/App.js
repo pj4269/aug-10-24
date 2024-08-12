@@ -84,8 +84,7 @@ const App = () => {
        })
       }
       
-      <h2>1st WebCam: Not working!</h2>
-       <WebCam />   
+   
       
     </div>
   )
