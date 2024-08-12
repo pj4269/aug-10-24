@@ -18,7 +18,7 @@ const myAPI = "ApiAug10"
  
 const path = "/picture"; // .. /{pictureId}
 //const path = "/picture2"
-const myEndpoint = "https://300fh0i2f6.execute-api.us-west-2.amazonaws.com" //  "https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev",
+const myEndpoint = "https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev" //  "https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev",
 const awsmobile = {
     "aws_project_region": "us-west-2",
     "aws_cloud_logic_custom": [

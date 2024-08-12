@@ -79,7 +79,7 @@ function Photo_capture_from_scratch() {
   try {
     console.log("Hello", formData2);
     //const response = await fetch(`https://ekidbibwk0.execute-api.us-west-2.amazonaws.com/dev/${formData2}`, {
-    const response = await fetch( "https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/picture", {
+    const response = await fetch( "https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture", {
       method: 'POST',
       body: formData2,
       headers: {
@@ -115,7 +115,7 @@ function Photo_capture_from_scratch() {
 
     const sendData = async () => {
       try {
-        const response = await fetch(`https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/picture/${data}`, 
+        const response = await fetch(`https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/${data}`, 
         //const response = await fetch(`https://ekidbibwk0.execute-api.us-west-2.amazonaws.com/dev/${data}`, 
         {
         method: "GET",
@@ -210,7 +210,7 @@ const handleCanPlayThrough = () => {
 
     const fetchPhotoFromLambda = async () => {
         try {
-            const response = await fetch ("https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/picture/");
+            const response = await fetch ("https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/");
             //const response = await fetch("https://ekidbibwk0.execute-api.us-west-2.amazonaws.com/dev");
             
             if (!response.ok) {
