@@ -63,6 +63,58 @@ function Photo_capture_from_scratch() {
   const handleSubmit = async (capturedFile) => {
   setIsUploading(true);
 
+  // Jul 31, 24: Sending a test number - works
+
+  try {
+    // sending data to Lambda     
+    
+    // Jul 30th, 24 - sending and adding a test number = 3 and returns 103
+    
+    const data = "3";   
+
+    const sendData = async () => {
+      try {
+        const response = await fetch(`https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/${data}`, 
+        //const response = await fetch(`https://ekidbibwk0.execute-api.us-west-2.amazonaws.com/dev/${data}`, 
+        {
+        method: "GET",
+        headers: {
+        "Content-Type": "application/json"
+          }
+        });
+    
+      //        const result = await response.json();
+
+
+      const result = await response.json();
+      console.log("Aug 08, 24: ", result);
+        } catch (error) {
+        console.error("Error sending data:", error);
+                        }
+                                 };
+    // Aug 02 - commented out: works 
+    sendData();
+    
+    
+    //
+
+    // New: Jun 29, 24 : Receiving Photo from Lambda
+    setUploadSuccess(true);
+    // Aug 02: commented out
+    //const imageSrc = await fetchPhotoFromLambda();
+    //console.log("Received Data from Lambda", imageSrc);
+    //setPhotoSrc(imageSrc); // Update state with the fetched photo   
+    
+    
+    
+  } catch (error) {
+    console.error("Error uploading file:", error);
+  } finally {
+    setIsUploading(false);
+  }
+
+
+
   const formData2 = new FormData();
   
   // For caching: 
