@@ -348,7 +348,7 @@ function Photo_capture_from_scratch() {
   
   try {
 
-    const response = await fetch("https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/", requestOptions);       
+    const response2 = await fetch("https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/", requestOptions);       
 
     const response = await fetch( `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/`, {
       method: 'POST',
