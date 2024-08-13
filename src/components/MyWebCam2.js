@@ -84,10 +84,10 @@ function Photo_capture_from_scratch() {
     const response = await fetch( `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture`, {
       method: 'POST',
       body: formData2,
-      //headers: {
-      //"Content-Type": "application/json",
-      //"Access-Control-Allow-Origin": "*"
-      //}
+      headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+      }
       // Don't set Content-Type header, let the browser set it with the correct boundary for FormData
     });
 

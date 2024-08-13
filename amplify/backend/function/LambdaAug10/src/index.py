@@ -61,10 +61,7 @@ def handler(event, context):
     print ("ELSE:::::::::")
     
     #body = json.loads(event['body'])  # Here I'm getting an error
-    f_name = "George"#body['f_name']
-    l_name = "Posttter"#body['l_name']
-    print ("received names:  ",  f_name, l_name)
-    print ('Hello from your new Amplify Python lambda- POST!'  + f_name + l_name)
+
     picture_id = event['pathParameters']['pictureId']
     
     # Convert the picture_id to an integer
@@ -73,7 +70,7 @@ def handler(event, context):
     # Add 100 to the integer
     result = str(picture_id_int + 100 )    
     # return {"f_name_received": f_name}
-    print ('Hi from your new Amplify Python lambda: ' + time + "-"  + result)      
+    print ('New Number Amplify Python lambda: ' + time + "-"  + result)      
     #worked
     return {
       'statusCode': 200,
