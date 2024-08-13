@@ -1,3 +1,4 @@
+/*
 import React, { useState, useEffect, useRef } from 'react';
 
 function Photo_capture_from_scratch() {
@@ -29,12 +30,7 @@ function Photo_capture_from_scratch() {
   }, []);
   
   
-  /*
-  const handleTakePicture = () => {
-    const context = canvasRef.current.getContext('2d');
-    context.drawImage(videoRef.current, 0, 0, 320, height);
-    photoRef.current.src = canvasRef.current.toDataURL('image/png');
-  };  */
+
   
   // Apr 13, 24: OK this works!
   const handleTakePicture = async () => {
@@ -272,8 +268,10 @@ const handleCanPlayThrough = () => {
   );
 }
 
+
 export default Photo_capture_from_scratch;
-/*
+*/
+
 import React, { useState, useEffect, useRef } from 'react';
 
 function Photo_capture_from_scratch() {
@@ -352,7 +350,7 @@ function Photo_capture_from_scratch() {
 
     
     //const response = await fetch(`https://ekidbibwk0.execute-api.us-west-2.amazonaws.com/dev/${formData2}`, {
-    const response = await fetch( `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture`, {
+    const response = await fetch( `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/`, {
       method: 'POST',
       body: formData2,
       headers: {
@@ -555,4 +553,4 @@ const handleCanPlayThrough = () => {
 }
 
 export default Photo_capture_from_scratch;
-*/
+
