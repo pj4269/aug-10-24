@@ -77,9 +77,10 @@ function Photo_capture_from_scratch() {
   // Aug 02, 24: sending a photo
   
   try {
-    console.log("Hello", formData2);
+    console.log("Here is my picture: ", formData2);
+    
     //const response = await fetch(`https://ekidbibwk0.execute-api.us-west-2.amazonaws.com/dev/${formData2}`, {
-    const response = await fetch( "https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture", {
+    const response = await fetch( `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture`, {
       method: 'POST',
       body: formData2,
       headers: {

@@ -80,6 +80,9 @@ Aug-09-24:  1. Export API Gateway to US-West-1: https://stackoverflow.com/questi
 
 9. npm install aws-amplify
 
+10. a) Enabled CORS on APi Gateway
+
+    b) Deploy API
 
 
    
