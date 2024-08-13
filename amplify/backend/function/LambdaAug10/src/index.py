@@ -4,14 +4,14 @@ import json
      
    
 def handler(event, context):
-  print('received event: ', event)
+  #print('received event: ', event)
   get_raw_path    = ''
   create_raw_path = '/postP'
   #target_resource = '/picture/{pictureId}'
   target_resource = '/test'  
   time = "Aug 08: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
-  print (event)
+  #print (event)
   '''
   if event['path'] == get_raw_path:
     # call database
