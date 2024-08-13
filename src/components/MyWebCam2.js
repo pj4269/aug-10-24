@@ -346,19 +346,19 @@ function Photo_capture_from_scratch() {
   // Aug 02, 24: sending a photo
   //console.log("Here is my picture: ", formData2);  
   
-  //try {
+  try {
 
     const response = await fetch("https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/", requestOptions);       
 
-    //const response = await fetch( `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/`, {
-    //  method: 'POST',
-    //  body: formData2,
-    //  headers: {
-    //  "Content-Type": "application/json",
-    //  "Access-Control-Allow-Origin": "*"
-    //  }
+    const response = await fetch( `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/`, {
+      method: 'POST',
+      body: formData2,
+      headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+      }
       // Don't set Content-Type header, let the browser set it with the correct boundary for FormData
-    //});
+    });
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -368,8 +368,8 @@ function Photo_capture_from_scratch() {
     console.log("Response from server:", result);    
     setIsUploading(false);
       } 
-    //catch (error) {
-    //console.error("Error sending data:", error);
+    catch (error) {
+    console.error("Error sending data:", error);
     setIsUploading(false);
     // Handle error here (e.g., show error message to user)
                  }
