@@ -46,7 +46,7 @@ function Photo_capture_from_scratch() {
   canvasRef.current.toBlob(async (blob) => {
     // Create a File object from the Blob
     const file = new File([blob], "photo_from_react.webp", { type: "image/webp", lastModified: new Date() });
-    
+    console.log(file)
     // Call handleSubmit, passing the captured image as a File object
     await handleSubmit(file);
       // webp is sending file much faster than PNG!
@@ -75,18 +75,19 @@ function Photo_capture_from_scratch() {
   };
   
   // Aug 02, 24: sending a photo
+  console.log("Here is my picture: ", formData2);  
   
   try {
-    console.log("Here is my picture: ", formData2);
+
     
     //const response = await fetch(`https://ekidbibwk0.execute-api.us-west-2.amazonaws.com/dev/${formData2}`, {
     const response = await fetch( `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture`, {
       method: 'POST',
       body: formData2,
-      headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
-      }
+      //headers: {
+      //"Content-Type": "application/json",
+      //"Access-Control-Allow-Origin": "*"
+      //}
       // Don't set Content-Type header, let the browser set it with the correct boundary for FormData
     });
 
