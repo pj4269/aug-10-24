@@ -371,7 +371,7 @@ function Photo_capture_from_scratch() {
     setIsUploading(false);
       } 
     catch (error) {
-    console.error("Error sending data:", error);
+    console.error("Error sending data:", error); }
     setIsUploading(false);
     // Handle error here (e.g., show error message to user)
                  }
