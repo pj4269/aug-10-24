@@ -346,7 +346,7 @@ function Photo_capture_from_scratch() {
   // Aug 02, 24: sending a photo
   //console.log("Here is my picture: ", formData2);  
   
-  try {
+  //try {
                      //              https://300fh0i2f6.execute-api.us-west-2.amazonaws.com
     const response = await fetch('https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/', requestOptions);       
     const result = await response.json();
@@ -369,10 +369,10 @@ function Photo_capture_from_scratch() {
     //const result = await response.json();
     //console.log("Response from server:", result);    
     setIsUploading(false);
-      } 
-    catch (error) {
-    console.error("Error sending data:", error);
-    setIsUploading(false);
+    //  } 
+    //catch (error) {
+    //console.error("Error sending data:", error);
+    //setIsUploading(false);
     // Handle error here (e.g., show error message to user)
                  }
     
