@@ -374,7 +374,7 @@ function Photo_capture_from_scratch() {
     //console.error("Error sending data:", error);
     //setIsUploading(false);
     // Handle error here (e.g., show error message to user)
-                 }
+    //             }
     
 
   // Jul 31, 24: Sending a test number - works
