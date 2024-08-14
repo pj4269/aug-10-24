@@ -350,7 +350,7 @@ function Photo_capture_from_scratch() {
                      //              https://300fh0i2f6.execute-api.us-west-2.amazonaws.com
     const response = await fetch('https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/', requestOptions);       
     const result = await response.json();
-    console.log("Response from server2:", result2);    
+    console.log("Response from server2:", result);    
 
     /*
     const response = await fetch( 'https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/', {
