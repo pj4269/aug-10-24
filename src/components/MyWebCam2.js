@@ -336,7 +336,7 @@ function Photo_capture_from_scratch() {
   
   // For caching: 
   const timestamp = Date.now();
-  formData2.append("file", capturedFile, `${timestamp}_${capturedFile.name}`);  
+  formData2.append("file", capturedFile );//, `${timestamp}_${capturedFile.name}`);  
   //console.log( "Hi ", formData2 )
   const requestOptions = {
     method: "POST",
@@ -348,7 +348,7 @@ function Photo_capture_from_scratch() {
   
   try {
                      //              https://300fh0i2f6.execute-api.us-west-2.amazonaws.com
-    const response2 = await fetch('https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/', requestOptions);       
+    const response2 = await fetch(`https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/`, requestOptions);       
     const result2 = await response2.json();
     console.log("Response from server2:", result2);    
 

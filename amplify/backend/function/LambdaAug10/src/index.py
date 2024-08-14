@@ -11,7 +11,7 @@ def handler(event, context):
   target_resource = '/test'  
   time = "Aug 08: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
-  #print (event)
+  print (event)
   '''
   if event['path'] == get_raw_path:
     # call database
