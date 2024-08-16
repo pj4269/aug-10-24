@@ -341,6 +341,9 @@ function Photo_capture_from_scratch() {
   const requestOptions = {
     method: "POST",
     body: formData2,
+      headers: {
+      "Access-Control-Allow-Origin": "*"
+      }    
   };
   
   // Aug 02, 24: sending a photo
