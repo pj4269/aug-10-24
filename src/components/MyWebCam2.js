@@ -348,7 +348,17 @@ function Photo_capture_from_scratch() {
   
   //try {
                      //              https://300fh0i2f6.execute-api.us-west-2.amazonaws.com
-    const response = await fetch('https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/', requestOptions);       
+    //const response = await fetch('https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/', requestOptions); 
+    
+        const response = await fetch(`https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/${formData2}`, 
+        //const response = await fetch(`https://ekidbibwk0.execute-api.us-west-2.amazonaws.com/dev/${data}`, 
+        {
+        method: "GET",
+        headers: {
+        "Content-Type": "application/json"
+          }
+        });    
+          
     const result = await response.json();
     console.log("Response from server2:", result);    
 
