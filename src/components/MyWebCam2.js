@@ -339,7 +339,7 @@ function Photo_capture_from_scratch() {
   formData2.append("file", capturedFile, `${timestamp}_${capturedFile.name}`);  
   //console.log( "Hi ", formData2 )
   const requestOptions = {
-    method: "GET",
+    method: "POST",
     body: formData2
   };
   
@@ -348,7 +348,7 @@ function Photo_capture_from_scratch() {
   
   //try {
                      //              https://300fh0i2f6.execute-api.us-west-2.amazonaws.com
-    const response = await fetch('https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/', requestOptions); 
+    const response = await fetch('https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture', requestOptions); 
 
 
         //const response = await fetch(`https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/${data}`,     
