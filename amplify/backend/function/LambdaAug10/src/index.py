@@ -11,29 +11,10 @@ def handler(event, context):
   target_resource = '/test'  
   time = "Aug 08: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
-  print ("Hi there: ")
+  print ("Hi there: ", event)
   print (event)
-  '''
-  if event['path'] == get_raw_path:
-    # call database
-    pid = event['queryStringParameters']['p_id']
-    print ("Using GEEEEEEEETTTTT")
-    print ("received number: ", pid, type(pid), int(pid)+5)
-    print ('Hello from your new Amplify Python lambda GET !' + time)
-    #return { "aaaaaaaaaaaaaaaaa": "bbbbbbbbb"  }
-    #message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
-    # not worked:
-    #return {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"} 
-    # worked
-    return {
-      'statusCode': 200,
-      'headers': {
-          'Access-Control-Allow-Headers': '*',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps( message )#'Hello from your new Amplify Python lambda GET !' + time)
-          }
-   ''' 
-          
+
+  '''          
           
   if event['resource'] == target_resource:
 
@@ -80,6 +61,14 @@ def handler(event, context):
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(result)
           }
+  '''
+  return {
+      'statusCode': 200,
+      'headers': {
+          'Access-Control-Allow-Headers': '*',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(event)
+          }        
     
           
 
