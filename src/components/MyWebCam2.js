@@ -340,10 +340,7 @@ function Photo_capture_from_scratch() {
   //console.log( "Hi ", formData2 )
   const requestOptions = {
     method: "POST",
-    body: formData2,
-      headers: {
-      "Access-Control-Allow-Origin": "*"
-      }    
+    body: formData2
   };
   
   // Aug 02, 24: sending a photo
@@ -351,7 +348,7 @@ function Photo_capture_from_scratch() {
   
   //try {
                      //              https://300fh0i2f6.execute-api.us-west-2.amazonaws.com
-    const response = await fetch(`https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/`, requestOptions);       
+    const response = await fetch('https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/', requestOptions);       
     const result = await response.json();
     console.log("Response from server2:", result);    
 
