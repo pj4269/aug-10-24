@@ -340,7 +340,7 @@ function Photo_capture_from_scratch() {
   //console.log( "Hi ", formData2 )
   const requestOptions = {
     method: "POST",
-    body: formData2
+    body: "100"
   };
   
   // Aug 02, 24: sending a photo
