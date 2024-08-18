@@ -7,6 +7,13 @@
       "permissions": {
         "setting": "open"
       }
+    },
+    "/picture2": {
+      "name": "/picture2",
+      "lambdaFunction": "LambdaAug10",
+      "permissions": {
+        "setting": "open"
+      }
     }
   }
 }
