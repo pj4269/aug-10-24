@@ -344,7 +344,18 @@ function Photo_capture_from_scratch() {
   };
   
   // Aug 02, 24: sending a photo
-  //console.log("Here is my picture: ", formData2);  
+  // Aug 16, 24: error message:   I might have to remove:  
+  /*
+  {
+    "message": "Could not parse request body into json: Could not parse payload into json: Unexpected character (\'-\' (code 45)) in numeric value: 
+    expected digit (0-9) to follow minus sign, for valid numeric value\n at [Source: (byte[])\"------WebKitFormBoundaryukoQcjzfKv46mYCG\r\nContent-Disposition: 
+    form-data; name=\"file\"; filename=\"1723831132883_photo_from_react.webp\"\r\nContent-Type:
+     image\/webp\r\n\r\nRIFFrp\u0001\u0000WEBPVP8X\n\u0000\u0000\u0000 \u0000\u0000\u0000?\u0001\u0000\uFFFD\u0000\u0000ICCP\uFFFD\u0001\u0000\u0000\u0000\
+     u0000\u0001\uFFFD\u0000\u0000\u0000\u0000\u00040\u0000\u0000mntrRGB XYZ \u0007\uFFFD\u0000\u0001\u0000\u0001\u0000\u0000\u0000\u0000\u0000\u0000acsp\u0000
+
+     [truncated 169444 bytes]; line: 1, column: 3]"
+}
+  */
   
   //try {
                      //              https://300fh0i2f6.execute-api.us-west-2.amazonaws.com
@@ -420,7 +431,7 @@ function Photo_capture_from_scratch() {
                         }
                                  };
     // Aug 02 - commented out: works 
-    //sendData();
+    sendData();
     
     
     //
