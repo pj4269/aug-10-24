@@ -339,7 +339,7 @@ function Photo_capture_from_scratch() {
   formData2.append("file", capturedFile, `${timestamp}_${capturedFile.name}`);  
   //console.log( "Hi ", formData2 )
   const requestOptions = {
-    method: "POST",
+    method: "GET",
     body: "4"
   };
   
