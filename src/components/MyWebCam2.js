@@ -273,6 +273,10 @@ export default Photo_capture_from_scratch;
 */
 
 import React, { useState, useEffect, useRef } from 'react';
+//import { Auth } from 'aws-amplify';
+//import { getCurrentUser } from 'aws-amplify/auth';
+
+
 
 function Photo_capture_from_scratch() {
   const [streaming, setStreaming] = useState(false);
@@ -364,9 +368,25 @@ function Photo_capture_from_scratch() {
     const result = await response.json();
     console.log("Response from server2:", result); 
     */
-    // new: 
-    const userId = '12345'; // replace with your actual test user_id
-    const url = `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/${userId}`;
+    // new: OK it seems to work!
+    const myuserId = '12345'; // replace with your actual test user_id
+    //const user = await Auth.currentAuthenticatedUser();
+   
+    //const user = await getCurrentUser();
+    //const userId = user.userId; //name; // or user.attributes.sub depending on your setup
+    
+    /* left here : Aug 19, 24: 
+    import { getCurrentUser } from 'aws-amplify/auth';
+
+    const { username, userId, signInDetails } = await getCurrentUser();
+
+    console.log("username", username);
+    console.log("user id", userId);
+    console.log("sign-in details", signInDetails);  */
+   
+    
+    
+    const url = `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/${myuserId}`;
 
 		const response = await fetch(url, requestOptions);
 		const data = await response.json(); // or response.text(), depending on your response type

@@ -1,9 +1,20 @@
 
 
-Now I want : picture3/"user_id_timestamp"/picture
+Now I want : picture3/"user_id_timestamp"/picture  : works
 
 
+Aug 19, 24: a) npm install aws-amplify   : I can take care of it later. 
 
+
+           Now my challenge is to retrieve user information -> userId    -> 
+           
+           
+           1. amplify add auth  : error = Node 14 is not supported
+                                  solution = in amplify/backend/auth/aug10247a6cbef3/build/aug10247a6cbef3-cloudformation-template.json -> updated nodejs14X to nodejs20X
+           2. amplify push
+
+
+           b) Now I want to tes pillow
 
 
 Aug 18, 24: Solution:  Added a new API without {pictureId} extention : "/picture2"   # new api                            => workig now   
