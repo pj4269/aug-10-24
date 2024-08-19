@@ -1,4 +1,13 @@
 
+
+Now I want : picture3/"user_id_timestamp"/picture
+
+
+
+
+
+Aug 18, 24: Solution:  Added a new API without {pictureId} extention : "/picture2"   # new api                            => workig now   
+
 Aug 14, 24: Debugging :  Solution = create "ANY" method for "/picture" and linked it to the Lambda function ->Deployed it  -> this might be it!
 
 Aug 10, 24: 1. Problem : Trying to create a new Amplify App -> error: "Too many apps"
