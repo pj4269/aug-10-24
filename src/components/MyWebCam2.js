@@ -368,13 +368,10 @@ function Photo_capture_from_scratch() {
     const userId = '12345'; // replace with your actual test user_id
     const url = `https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/${userId}`;
 
-    try {
-							const response = await fetch(url, requestOptions);
-							const data = await response.json(); // or response.text(), depending on your response type
-							console.log(data); // handle the response data
-						} catch (error) {
-							console.error('Error:', error);
-						}
+		const response = await fetch(url, requestOptions);
+		const data = await response.json(); // or response.text(), depending on your response type
+		console.log(data); // handle the response data
+
 
         //const response = await fetch(`https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/picture/${data}`);
         /*
