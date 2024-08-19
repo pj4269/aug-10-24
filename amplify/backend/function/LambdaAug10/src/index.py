@@ -7,7 +7,7 @@ from PIL import Image
 def handler(event, context):
   #print('received event: ', event)
   image = Image.new('RGB', (100, 100), color = 'red')
-  print ("Pillow image: ", image)
+  print ("Pillow image - Aug 19, 24: ", image)
   get_raw_path    = ''
   create_raw_path = '/postP'
   #target_resource = '/picture/{pictureId}'

@@ -15,14 +15,11 @@
       "function": {
         "LambdaAug10": {
           "deploymentBucketName": "amplify-aug1024-dev-113816-deployment",
-          "s3Key": "amplify-builds/LambdaAug10-68474863706477707a71-build.zip"
+          "s3Key": "amplify-builds/LambdaAug10-646a3557336a54695272-build.zip"
         }
       },
       "api": {
         "ApiAug10": {}
-      },
-      "auth": {
-        "aug10246395bbaa": {}
       }
     }
   }
