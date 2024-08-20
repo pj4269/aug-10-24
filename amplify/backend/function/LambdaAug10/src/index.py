@@ -1,6 +1,5 @@
 import json
-
-#from PIL import Image
+from my_pillow.PIL import Image
 import pandas as pd
      
    
