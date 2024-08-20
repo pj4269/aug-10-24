@@ -10,7 +10,7 @@ def handler(event, context):
   # Create the pandas DataFrame
   df = pd.DataFrame(data, columns=['Name', 'Age'])
   # print dataframe.
-  print( df.to_json())
+  #print( df.to_json())
 
   #print('received event: ', event)
   #image = Image.new('RGB', (100, 100), color = 'red')
@@ -22,9 +22,9 @@ def handler(event, context):
   time = "Aug 08: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
   print ("Konichiwa there: ", event)
-  data_back = event['body']
-  print ("Helllo", data_back )
-  print ( type(data_back) )
+  #data_back = event['body']
+  #print ("Helllo", data_back )
+  #print ( type(data_back) )
 
   '''          
           
@@ -79,7 +79,7 @@ def handler(event, context):
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(data_back )
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(event )
           }        
     
           
