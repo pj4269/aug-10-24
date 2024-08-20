@@ -10,7 +10,7 @@ def handler(event, context):
   # Create the pandas DataFrame
   df = pd.DataFrame(data, columns=['Name', 'Age'])
   # print dataframe.
-  print(df)
+  print( df.to_json())
 
   #print('received event: ', event)
   #image = Image.new('RGB', (100, 100), color = 'red')
