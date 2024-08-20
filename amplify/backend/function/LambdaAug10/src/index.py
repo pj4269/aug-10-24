@@ -21,9 +21,9 @@ def handler(event, context):
   target_resource = '/test'  
   time = "Aug 08: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
-  print ("Hi there: ", event)
+  print ("Konichiwa there: ", event)
   data_back = event['body']
-  print (data_back, type(data_back))
+  print ("Helllo", data_back ) type(data_back))
 
   '''          
           
@@ -78,7 +78,7 @@ def handler(event, context):
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(data_back)
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(df.to_json())
           }        
     
           
