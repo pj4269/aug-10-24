@@ -22,7 +22,8 @@ def handler(event, context):
   time = "Aug 08: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
   print ("Hi there: ", event)
-  print (event)
+  data_back = event['body']
+  print (data_back, type(data_back))
 
   '''          
           
@@ -77,7 +78,7 @@ def handler(event, context):
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(event)
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(data_back)
           }        
     
           
