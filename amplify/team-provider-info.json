@@ -15,7 +15,7 @@
       "function": {
         "LambdaAug10": {
           "deploymentBucketName": "amplify-aug1024-dev-113816-deployment",
-          "s3Key": "amplify-builds/LambdaAug10-646a3557336a54695272-build.zip"
+          "s3Key": "amplify-builds/LambdaAug10-4e70576d57623659394a-build.zip"
         }
       },
       "api": {
