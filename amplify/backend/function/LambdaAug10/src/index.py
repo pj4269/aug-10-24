@@ -13,8 +13,8 @@ def handler(event, context):
   print( df.to_json())
 
   #print('received event: ', event)
-  #image = Image.new('RGB', (100, 100), color = 'red')
-  #print ("Pillow image - Aug 20, 24: ", type(image)  )
+  image = Image.new('RGB', (100, 100), color = 'red')
+  print ("Pillow image - Aug 20, 24: ", type(image)  )
   get_raw_path    = ''
   create_raw_path = '/postP'
   #target_resource = '/picture/{pictureId}'
@@ -78,7 +78,7 @@ def handler(event, context):
       'headers': {
           'Access-Control-Allow-Headers': '*',
           'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(df.to_json())
+          'Access-Control-Allow-Methods': 'OPTIONS,POST,GET' }, 'body': json.dumps(data_back )
           }        
     
           
