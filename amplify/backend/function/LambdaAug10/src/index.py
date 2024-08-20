@@ -4,9 +4,17 @@ import pandas as pd
      
    
 def handler(event, context):
+
+  # initialize list of lists
+  data = [['tom', 10], ['nick', 15], ['juli', 14]]
+  # Create the pandas DataFrame
+  df = pd.DataFrame(data, columns=['Name', 'Age'])
+  # print dataframe.
+  print(df)
+
   #print('received event: ', event)
-  image = Image.new('RGB', (100, 100), color = 'red')
-  print ("Pillow image - Aug 20, 24: ", type(image)  )
+  #image = Image.new('RGB', (100, 100), color = 'red')
+  #print ("Pillow image - Aug 20, 24: ", type(image)  )
   get_raw_path    = ''
   create_raw_path = '/postP'
   #target_resource = '/picture/{pictureId}'
