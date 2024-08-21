@@ -48,7 +48,7 @@ def handler(event, context):
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
   print ("Konichiwa there: ", event)
   data_back = event['body']
-  print ("Helllo", data_back )
+  print ("Hi", data_back )
   #print ( type(data_back) )
 
   '''          
