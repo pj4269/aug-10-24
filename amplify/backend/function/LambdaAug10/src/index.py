@@ -1,7 +1,32 @@
 import json
-#from my_pillow.PIL import Image
+from PIL import Image
 import pandas as pd
-     
+
+
+'''  Aug 20, 24: 
+import base64
+
+def lambda_handler(event, context):
+    # Assuming body contains base64-encoded data
+    photo_base64 = event.get('body', '')
+    
+    # Decode if necessary
+    try:
+        photo_bytes = base64.b64decode(photo_base64)
+        return {
+            'statusCode': 200,
+            'headers': {'Content-Type': 'image/jpeg'},  # Adjust content type as needed
+            'body': photo_bytes,
+            'isBase64Encoded': True
+        }
+    except Exception as e:
+        return {
+            'statusCode': 400,
+            'body': str(e)
+        }
+
+
+'''     
    
 def handler(event, context):
 
@@ -22,8 +47,8 @@ def handler(event, context):
   time = "Aug 08: 3 pm"
   message = {"f_name":"AAAAAAA", "l_name":"BBBBBBBBBB"}
   print ("Konichiwa there: ", event)
-  #data_back = event['body']
-  #print ("Helllo", data_back )
+  data_back = event['body']
+  print ("Helllo", data_back )
   #print ( type(data_back) )
 
   '''          
