@@ -3,6 +3,26 @@
 Now I want : picture3/"user_id_timestamp"/picture  : works
 
 
+Aug 22, 24  :  1) mkdir pillow_folder
+
+               2) cd pillow folder
+               
+               
+                  pip3 install -t ./pillow_folder Pillow==10.0.0   # for Python 3.10 compatible
+                  
+               
+               3) Copied, pasted it inside :    python/lib/python3.10/site-packages   
+               
+               4) Test it: 
+                           test.py inside   "python/lib/python3.10/site-packages  "    => Works!!!!!!!
+
+
+
+               5) zip the "python" folder  :  zip -r pillow-layer.zip python
+               
+               6) Create a layer in Lambda : x86_64
+
+
 Aug 19, 24: a) npm install aws-amplify   : I can take care of it later. 
 
 
