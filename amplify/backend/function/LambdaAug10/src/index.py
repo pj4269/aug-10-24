@@ -1,6 +1,7 @@
 import json
 from PIL import Image
-import pandas as pd
+import tflite_runtime.interpreter as tflite
+#import pandas as pd
 
 
 '''  Aug 20, 24: 
@@ -31,15 +32,15 @@ def lambda_handler(event, context):
 def handler(event, context):
 
   # initialize list of lists
-  data = [['tom', 10]]
+  #data = [['tom', 10]]
   # Create the pandas DataFrame
-  df = pd.DataFrame(data, columns=['Name', 'Age'])
+  #df = pd.DataFrame(data, columns=['Name', 'Age'])
   # print dataframe.
-  print( df )
+  #print( df )
 
   #print('received event: ', event)
   image = Image.new('RGB', (100, 100), color = 'red')
-  print ("Pillow image - Aug 22, 24 - 10am: ", type(image)  )
+  print ("Pillow image - Aug 26, 24 - 1:55 pm : ", type(image)  )
   get_raw_path    = ''
   create_raw_path = '/postP'
   #target_resource = '/picture/{pictureId}'

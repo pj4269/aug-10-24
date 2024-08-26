@@ -3,7 +3,29 @@
 Now I want : picture3/"user_id_timestamp"/picture  : works
 
 
-Aug 22, 24  :  1) mkdir pillow_folder
+Aug 26, 24  :  Tflite   1)  cd tf_lite_folder
+                        2)  zip -r tflite-pillow-layer.zip python
+
+
+Aug 24, 24  : 1) Numpy 1 + tflite combo : pip3 install -t ./tf_lite_folder "numpy<2.0" tflite-runtime
+
+               2) Create directory: mkdir -p tf_lite_folder/python/lib/python3.10/site-packages
+
+Aug 23, 24  : Now I want to use Tensorflow Lite
+
+               1) mkdir tf_lite_folder
+
+               2) cd tf_lite_folder folder
+               
+                  pip3 install -t ./tf_lite_folder tflite-runtime
+               
+               3) Copied, pasted it inside :    python/lib/python3.10/site-packages 
+               
+               4) Test it: 
+
+Aug 22, 24  :  Installing Pillow 10.0.0 for Python 3.10
+
+               1) mkdir pillow_folder
 
                2) cd pillow folder
                
