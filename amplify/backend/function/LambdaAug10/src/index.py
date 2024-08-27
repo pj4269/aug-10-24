@@ -40,7 +40,7 @@ def handler(event, context):
 
   #print('received event: ', event)
   image = Image.new('RGB', (100, 100), color = 'red')
-  print ("Pillow image - Aug 26, 24 - 1:55 pm : ", type(image)  )
+  print ("Pillow image - Aug 27, 24 - 1:55 pm : ", type(image)  )
   get_raw_path    = ''
   create_raw_path = '/postP'
   #target_resource = '/picture/{pictureId}'
