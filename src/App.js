@@ -23,7 +23,7 @@ const path = "/picture"; // .. /{pictureId}
 // testing a new functions:
 
 const myEndpoint = "https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/Aug2924Test" 
-t
+
 const awsmobile = {
     "aws_project_region": "us-west-2",
     "aws_cloud_logic_custom": [
