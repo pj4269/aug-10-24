@@ -21,7 +21,6 @@ const path = "/picture"; // .. /{pictureId}
 //const myEndpoint = "https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev" //  "https://0kl0o417d5.execute-api.us-west-2.amazonaws.com/dev",
 
 // testing a new functions:
-
 const myEndpoint = "https://300fh0i2f6.execute-api.us-west-2.amazonaws.com/dev/Aug2924Test" 
 
 const awsmobile = {
@@ -34,18 +33,6 @@ const awsmobile = {
         }
     ]
 }; 
-/*
-const awsmobile = {
-    "aws_project_region": "us-west-1",
-    "aws_cloud_logic_custom": [
-        {
-            "name": "ApiAug08",
-            "endpoint": "https://ekidbibwk0.execute-api.us-west-2.amazonaws.com/dev",
-            "region": "us-west-1"
-        }
-    ]
-};  */ 
-
 
 
 Amplify.configure(awsmobile);
