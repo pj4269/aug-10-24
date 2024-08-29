@@ -21,6 +21,11 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "aug1024MyTflite": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer"
     }
   },
   "parameters": {
@@ -37,6 +42,22 @@
         {
           "category": "function",
           "resourceName": "LambdaAug10"
+        }
+      ]
+    },
+    "AMPLIFY_function_aug1024MyTflite_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "aug1024MyTflite"
+        }
+      ]
+    },
+    "AMPLIFY_function_aug1024MyTflite_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "aug1024MyTflite"
         }
       ]
     }

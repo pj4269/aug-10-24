@@ -15,7 +15,11 @@
       "function": {
         "LambdaAug10": {
           "deploymentBucketName": "amplify-aug1024-dev-113816-deployment",
-          "s3Key": "amplify-builds/LambdaAug10-54474a3857592b36626e-build.zip"
+          "s3Key": "amplify-builds/LambdaAug10-68517062454d786d3976-build.zip"
+        },
+        "aug1024MyTflite": {
+          "deploymentBucketName": "amplify-aug1024-dev-113816-deployment",
+          "s3Key": "amplify-builds/aug1024MyTflite-LambdaLayerVersion6aa29358-build.zip"
         }
       },
       "api": {

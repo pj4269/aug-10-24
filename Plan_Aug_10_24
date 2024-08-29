@@ -3,6 +3,37 @@
 Now I want : picture3/"user_id_timestamp"/picture  : works
 
 
+
+Aug 29, 24  : Problem: Create Lambda from  a container image! 
+
+Aug 28, 24  :  1) Issue: when I add Tflite as Lambda alyer : there' a runtime issue: 
+
+    [ERROR] Runtime.ImportModuleError: Unable to import module 'index': /lib64/libm.so.6: version `GLIBC_2.27' not found (required by /opt/python/lib/python3.10/site-packages/tflite_runtime/_pywrap_tensorflow_interpreter_wrapper.so)
+Traceback (most recent call last):
+
+
+               2) Solution: 
+
+									 a)  
+										Package your TensorFlow model and code as a container image
+										Deploy the container image to Amazon ECR
+										Create a Lambda function using the container image
+
+									 b)
+										Connect Amplify frontend to EC2-hosted APIs via API Gateway
+
+
+                  c) upload TFLITE directly on your Lambda folders?  -> Didn't work!
+                  
+                  
+                  
+
+               My decision: create Lambda from  a container image!  -> Option B!
+               
+               
+               
+               
+
 Aug 26, 24  :  Tflite   1)  cd tf_lite_folder
                         2)  zip -r tflite-pillow-layer.zip python
 
